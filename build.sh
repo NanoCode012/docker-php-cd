@@ -11,18 +11,18 @@ docker-compose down
 #        the third to use SSL with nginx-proxy
 #        the fourth to use all
 
-x = 'docker-compose -f docker-compose.yml '
+cmd='docker-compose -f docker-compose.yml '
 
 if [ "$USE_COMPOSER" = true ] ; then
     echo 'Using Composer'
-    x += '-f docker-compose.composer.yml '
+    cmd+='-f docker-compose.composer.yml '
 fi
 
 if [ "$USE_SSL" = true ] ; then
     echo 'Using SSL'
-    x += '-f docker-compose.ssl.yml '
+    cmd+='-f docker-compose.ssl.yml '
 fi
 
-x += 'up -d'
+cmd+='up -d'
 
-echo $(eval "$x")
+echo $(eval "$cmd")
