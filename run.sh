@@ -14,7 +14,12 @@ set +a
 
 # Setup
 echo 'Checking for newer versions'
-cd app && git pull && cd ../deploy && git pull
+
+if [ -d app/.git ]; then
+    cd app
+    git pull
+    cd ..
+fi;
 
 # -------------------------------------------------------------------------- #
 
