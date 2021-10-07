@@ -29,6 +29,9 @@ Follow the base steps then add other integrations by following their steps.
 
 1. Rename `deploy/deploy-config.example.php` to `deploy/deploy-config.php` and replace the information.
 
+
+## Composer
+
 1. Set the following in `deploy/deploy-config.php`
     ```php
     define('USE_COMPOSER', true);
