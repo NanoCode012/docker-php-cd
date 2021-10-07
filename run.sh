@@ -22,7 +22,7 @@ if [ -d app/.git ]; then
     cd ..
 fi;
 
-echo 'Temporarily changing owner of mysql dir to $USER'
+echo "Temporarily changing owner of mysql dir to $USER"
 sudo chown -R ${USER}:${USER} mysql
 
 # -------------------------------------------------------------------------- #
