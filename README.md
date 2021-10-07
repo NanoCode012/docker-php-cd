@@ -29,7 +29,7 @@ Follow the base steps then add other integrations by following their steps.
 
 1. Rename `deploy/deploy-config.example.php` to `deploy/deploy-config.php` and replace the information.
 
-1. If you use Composer, uncomment `dockerfile` property in `docker-compose.yml`. Make sure to set the following in `deploy/deploy-config.php`
+1. Set the following in `deploy/deploy-config.php`
     ```php
     define('USE_COMPOSER', true);
     define('COMPOSER_HOME', '/tmp/composer');
@@ -38,8 +38,6 @@ Follow the base steps then add other integrations by following their steps.
 
 ## Nginx-Proxy
 1. Rename `env/.ssl.env.sample` to `env/.ssl.env` and fill it in.
-
-1. In `build.sh`, comment the first option and uncomment the second.
 
 
 # How to start
