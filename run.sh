@@ -40,8 +40,6 @@ echo 'Sleeping a bit...'
 sleep 35
 
 echo 'Sending final commands to container...'
-
-# Add any post changes below
-# docker exec -i ${CONTAINER_NAME} bash -c "echo 'hello'"
+bash post_run.sh $1
 
 echo 'Done!'
