@@ -9,4 +9,4 @@ docker-compose down
 # Choose the first for simple deploy
 #        the second with SSL (used with nginx-proxy)
 docker-compose up -d
-# docker-compose up -d -f docker-compose.yml -f docker-compose.ssl.yml
+# docker-compose -f docker-compose.yml -f docker-compose.ssl.yml up -d
