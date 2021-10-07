@@ -16,6 +16,10 @@ Follow the base steps then add other integrations by following their steps.
 
 ## Base
 
+1. Clone repo.
+    ```bash
+    $ git clone --recurse-submodules https://github.com/NanoCode012/docker-php-cd.git
+    ```
 1. Rename `.env.sample` to `.env` and fill it in.
 
 1. Create `app` directory and place PHP code within.
