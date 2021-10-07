@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Stop if error
-set -e 
+set -e
 
 docker-compose build
 docker-compose down
