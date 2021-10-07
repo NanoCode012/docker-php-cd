@@ -14,6 +14,7 @@ set +a
 
 # Setup
 echo 'Checking for newer versions'
+git pull
 
 if [ -d app/.git ]; then
     cd app
