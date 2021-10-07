@@ -28,6 +28,7 @@ sudo chown -R ${USER}:${USER} mysql
 # -------------------------------------------------------------------------- #
 
 # Start containers
+echo 'Rebuilding containers.. Shutting off old ones if exists..'
 bash build.sh
 
 # -------------------------------------------------------------------------- #
