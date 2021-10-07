@@ -37,7 +37,9 @@ Follow the base steps then add other integrations by following their steps.
 
 
 ## Nginx-Proxy
-1. Rename `env/.ssl.env.sample` to `env/.ssl.env` and fill it in. Then, in `run.sh`, under `Start Containers` section, change to the second option.
+1. Rename `env/.ssl.env.sample` to `env/.ssl.env` and fill it in.
+
+1. In `run.sh`, under `Start Containers` section, comment the first option and uncomment the second.
 
 
 # How to start
