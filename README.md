@@ -22,7 +22,7 @@ Follow the base steps then add other integrations by following their steps.
     ```
 1. Rename `.env.sample` to `.env` and fill it in.
 
-1. Create `app` directory and place PHP code within.
+1. Create `app` directory and place PHP code within. You can either clone a repo in or directly copy code in.
 
 
 ## Continuous Deployment
