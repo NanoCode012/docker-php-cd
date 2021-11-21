@@ -13,7 +13,6 @@ A simple barebone setup for hosting PHP code on a docker containers with integra
 
 Follow the base steps then add other integrations by following their steps.
 
-
 ## Base
 
 1. Clone repo.
@@ -23,7 +22,6 @@ Follow the base steps then add other integrations by following their steps.
 1. Copy `.env.sample` to `.env` and fill it in.
 
 1. Create `app` directory and place PHP code within. You can either clone a repo in or directly copy code in.
-
 
 ## Continuous Deployment
 
@@ -57,6 +55,16 @@ When ALL SETUP is complete, run the below.
 ```bash
 $ bash run.sh
 ```
+
+
+# Additional Customizations
+
+Extra configurations can be added to a file called `post_run.sh`. Some examples are provided in the sample file `post_run.sh.sample`. 
+One example use case is to "auto-reset" the sql database. This can be good when we update the database structure and would like a clean reset.
+
+1. Copy `post_run.sh.sample` to `post_run.sh`.
+
+1. Add custom bash code to `post_run.sh`.
 
 
 # License
