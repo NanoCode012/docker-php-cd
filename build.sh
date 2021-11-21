@@ -20,7 +20,7 @@ if [ "$USE_SSL" = true ] ; then
     CONF+='-f docker-compose.ssl.yml '
 fi
 
-docker-compose ${CONF} build --no-cache
+docker-compose ${CONF} build
 docker-compose down
 
 docker-compose ${CONF} up -d
