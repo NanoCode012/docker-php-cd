@@ -11,7 +11,7 @@ RUN cd app && \
     php composer.phar install && \
     rm composer.phar
     
-RUN ls
+RUN ls /app
 
 FROM mattrayner/lamp:latest-1804
 
