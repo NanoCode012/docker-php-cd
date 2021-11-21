@@ -36,13 +36,16 @@ bash build.sh
 # -------------------------------------------------------------------------- #
 
 # Post
-echo 'Sleeping a bit...'
-sleep 35
 
 # Run if the post_run.sh file exists
 if [[ -f "post_run.sh" ]]; then
+    echo 'Sleeping a bit...'
+    sleep 35
+
     echo 'Sending final commands to container...'
     bash post_run.sh $1
 fi
+
+# -------------------------------------------------------------------------- #
 
 echo 'Done!'
