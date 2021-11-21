@@ -39,7 +39,10 @@ bash build.sh
 echo 'Sleeping a bit...'
 sleep 35
 
-echo 'Sending final commands to container...'
-bash post_run.sh $1
+# Run if the post_run.sh file exists
+if [[ -f "post_run.sh" ]]; then
+    echo 'Sending final commands to container...'
+    bash post_run.sh $1
+fi
 
 echo 'Done!'
