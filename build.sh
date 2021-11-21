@@ -24,9 +24,9 @@ fi
 # Only run if container(s) is UP
 if docker-compose ps | grep -q "Up" ; then
     echo 'Container is currently running. Building container(s)..'
-#     docker-compose build ${CONF}
+    docker-compose ${CONF} build 
     docker-compose down
 fi
 
-cmd+="${CONF} up -d --build"
+cmd+="${CONF} up -d"
 echo $(eval "$cmd")
