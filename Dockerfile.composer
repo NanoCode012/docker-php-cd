@@ -10,8 +10,6 @@ RUN cd app && \
     php -r "unlink('composer-setup.php');" && \
     php composer.phar install && \
     rm composer.phar
-    
-RUN ls /app
 
 FROM mattrayner/lamp:latest-1804
 
