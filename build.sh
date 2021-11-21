@@ -27,6 +27,6 @@ if [ "$USE_SSL" = true ] ; then
     cmd+='-f docker-compose.ssl.yml '
 fi
 
-cmd+='up -d --force-recreate'
+cmd+='up -d --force-recreate --build'
 
 echo $(eval "$cmd")
