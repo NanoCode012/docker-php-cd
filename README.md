@@ -20,24 +20,31 @@ Follow the base steps then add other integrations by following their steps.
     ```bash
     $ git clone --recurse-submodules https://github.com/NanoCode012/docker-php-cd.git
     ```
-1. Rename `.env.sample` to `.env` and fill it in.
+1. Copy `.env.sample` to `.env` and fill it in.
 
 1. Create `app` directory and place PHP code within. You can either clone a repo in or directly copy code in.
 
 
 ## Continuous Deployment
 
-1. Rename `deploy/deploy-config.example.php` to `deploy/deploy-config.php` and replace the information.
+1. Copy `deploy/deploy-config.example.php` to `deploy/deploy-config.php` and set the below,
 
+    ```php
+    define('SECRET_ACCESS_TOKEN', 'BetterChangeMeNowOrSufferTheConsequences');
+    define('REMOTE_REPOSITORY', 'https://github.com/NanoCode012/simple-php-git-deploy.git');
+    define('BRANCH', 'main');
+    ```
 
 ## Composer
 
-1. Set the following in `deploy/deploy-config.php`
+1. Follow the Continuous Deployment steps above.
+
+1. Set the following,
+
     ```php
     define('USE_COMPOSER', true);
     define('COMPOSER_HOME', '/tmp/composer');
     ```
-
 
 ## Nginx-Proxy
 1. Rename `env/.ssl.env.sample` to `env/.ssl.env` and fill it in.
