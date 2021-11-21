@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Stop if error
-set -e 
+set -e
 
 # Add any post changes below
 
