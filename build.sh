@@ -8,7 +8,6 @@ set -e
 #        the third to use SSL with nginx-proxy
 #        the fourth to use all
 
-cmd='docker-compose '
 CONF='-f docker-compose.yml '
 
 if [ "$USE_COMPOSER" = true ] ; then
@@ -28,5 +27,4 @@ if docker-compose ps | grep -q "Up" ; then
     docker-compose down
 fi
 
-cmd+="${CONF} up -d"
-echo $(eval "$cmd")
+docker-compose ${CONF} up -d
