@@ -21,10 +21,10 @@ if [ "$USE_SSL" = true ] ; then
 fi
 
 # Only run if container(s) is UP
-if docker-compose ps | grep -q "Up" ; then
-    echo 'Container is currently running. Building container(s)..'
-    docker-compose ${CONF} build --no-cache
-    docker-compose down
-fi
+#if docker-compose ps | grep -q "Up" ; then
+#echo 'Container is currently running. Building container(s)..'
+docker-compose ${CONF} build --no-cache
+docker-compose down
+#fi
 
 docker-compose ${CONF} up -d
