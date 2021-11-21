@@ -3,8 +3,11 @@
 # Stop if error
 set -e
 
-docker-compose build
-docker-compose down
+# Only run if container(s) is UP
+if docker-compose ps | grep -q "Up" ; then
+    docker-compose build
+    docker-compose down
+fi
 
 # Choose the first for simple deploy
 #        the second to use Composer
