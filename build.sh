@@ -6,7 +6,7 @@ set -e
 # Only run if container(s) is UP
 if docker-compose ps | grep -q "Up" ; then
     echo 'Container is currently running. Building container(s)..'
-    docker-compose build
+    #docker-compose build
     docker-compose down
 fi
 
@@ -27,6 +27,6 @@ if [ "$USE_SSL" = true ] ; then
     cmd+='-f docker-compose.ssl.yml '
 fi
 
-cmd+='up -d'
+cmd+='up -d --force-recreate'
 
 echo $(eval "$cmd")
