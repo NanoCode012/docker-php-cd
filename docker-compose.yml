@@ -1,6 +1,7 @@
 version: '3'
 services:
   web:
+    build: .
     container_name: ${CONTAINER_NAME}
     volumes:
       - ./mysql:/var/lib/mysql # persist sql data
