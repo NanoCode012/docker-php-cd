@@ -27,6 +27,6 @@ if [ "$USE_SSL" = true ] ; then
     cmd+='-f docker-compose.ssl.yml '
 fi
 
-cmd+='up -d --build'
+cmd+='up -d'
 
 echo $(eval "$cmd")
